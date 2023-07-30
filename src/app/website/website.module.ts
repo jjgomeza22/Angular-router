@@ -13,6 +13,7 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
 import { LayoutComponent } from './components/layout/layout.component';
 import { NavComponent } from './components/nav/nav.component';
 import { SharedModule } from '../shared/shared.module';
+import { QuicklinkModule } from 'ngx-quicklink';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { SharedModule } from '../shared/shared.module';
     WebsiteRoutingModule,
     SwiperModule,
     SharedModule,
+    QuicklinkModule
   ]
 })
 export class WebsiteModule { }
