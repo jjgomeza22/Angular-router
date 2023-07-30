@@ -12,24 +12,13 @@ import { RecoveryComponent } from './pages/recovery/recovery.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { LayoutComponent } from './components/layout/layout.component';
-import { ImgComponent } from './components/img/img.component';
-import { ProductComponent } from './components/product/product.component';
-import { ProductsComponent } from './components/products/products.component';
 import { NavComponent } from './components/nav/nav.component';
-import { ReversePipe } from './pipes/reverse.pipe';
-import { TimeAgoPipe } from './pipes/time-ago.pipe';
-import { HighlightDirective } from './directives/highlight.directive';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
   declarations: [
-    ImgComponent,
-    ProductComponent,
-    ProductsComponent,
     NavComponent,
-    ReversePipe,
-    TimeAgoPipe,
-    HighlightDirective,
     HomeComponent,
     CategoryComponent,
     MycartComponent,
@@ -43,7 +32,8 @@ import { HighlightDirective } from './directives/highlight.directive';
   imports: [
     CommonModule,
     WebsiteRoutingModule,
-    SwiperModule
+    SwiperModule,
+    SharedModule,
   ]
 })
 export class WebsiteModule { }
