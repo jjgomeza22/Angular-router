@@ -11,6 +11,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { AuthGuard } from '../guards/auth.guard';
+import { ExitGuard } from '../guards/exit.guard';
 
 const routes: Routes = [
   {
@@ -56,6 +57,7 @@ const routes: Routes = [
       },
       {
         path: 'register',
+        canDeactivate: [ExitGuard],
         component: RegisterComponent
       },
     ]
